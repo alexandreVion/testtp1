@@ -1,10 +1,20 @@
-# testtp1
+# Rendu TP 1
 
-# TVA
+Etudiants | Date | Sujet
+:---|:---|:---
+Nathan Guilhot et Alexandre Vion | 05/02/2020 | Automatiser les tests d'une application web à l'aide de Selenium IDE.
+
+# Introduction
+
+Lors de ce premier TP nous devons faire des test sur différentes mini-applications faite sur Javascript. Ces test sont des test de détection réaliser en boite noire.
+
+# Première partie
+
+* Objectifs
+
+Sur cette première partie on doit réaliser des test sur une fonction qui calcule la TVA.
 
 * Partition TVA
-
-
 
 | taux 0%   | 0 | décimal | entier                |                           |
 |-----------|---|---------|-----------------------|---------------------------|
@@ -22,7 +32,11 @@
 |        20%        |          5          |           1           |           6           |           1           |           6           | :white_check_mark: |
 |        20%        |          4          |          0.80         |          4.80         |          0.80         |           4           |     :no_entry:     |
 
-# Badminton
+# Seconde partie Badminton
+
+* Objectifs
+
+Sur cette seconde partie on doit réaliser des test sur une fonction qui calcule la catégorie d'un joueur de badminton.
 
 * Partition
 
@@ -62,7 +76,12 @@
 | 70     | Vétéran 8 | Vétéran 8  | :white_check_mark: |
 | 144    | Vétéran 8 | Vétéran 22 | :no_entry:         |
 
-# Calculer la rubrique de paie EUNI Smic = 1000
+# Troisème partie
+
+* Objectifs 
+
+Sur cette troisième  partie on doit réaliser des test sur une fonction qui calcule la rubrique de paie EUNI. Pour réaliser 
+cet objectifs on a fixer le smic a 1000 €.
 
 * Partition 
 
@@ -83,7 +102,11 @@
 |  1501  |              0.01 / 0 / 0.01             |             0.01 / 0 / 0.01             | :white_check_mark: |
 |  3001  |             15 / 0.02 / 15.02            |            18 / 0.02 / 18.02            |     :no_entry:     |
 
-# Code PIN
+# Quatrième partie Code PIN
+
+* Objectifs
+
+Sur cette quatrième partie on doit réaliser des test sur une fonction qui vérifie un code PIN.
 
 * Partition
 
