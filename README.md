@@ -62,7 +62,46 @@
 | 70     | Vétéran 8 | Vétéran 8  | :white_check_mark: |
 | 144    | Vétéran 8 | Vétéran 22 | :no_entry:         |
 
-# Calculer la rubrique de paie EUNI
+# Calculer la rubrique de paie EUNI Smic = 1000
+
+* Partition 
+
+| 0 | 1-1499 | 1500 | 1501-2999 | 3000 | 3000+ |
+|---|--------|------|-----------|------|-------|
+
+* Test
+
+
+| Entrée | Attendu  (Tranche A / Tranche B / Total) | Obtenue (Tranche A / Tranche B / Total) |        Test        |
+|:------:|:----------------------------------------:|:---------------------------------------:|:------------------:|
+|    0   |                 0 / 0 / 0                |                0 / 0 / 0                | :white_check_mark: |
+|   900  |                 0 / 0 / 0                |                0 / 0 / 0                | :white_check_mark: |
+|  1500  |                 0 / 0 / 0                |                0 / 0 / 0                | :white_check_mark: |
+|  1800  |                 3 / 0 / 3                |                3 / 0 / 3                | :white_check_mark: |
+|  3000  |                15 / 0 / 15               |               15 / 0 / 15               | :white_check_mark: |
+|  4000  |               15 / 20 / 35               |               18 / 20 / 35              |     :no_entry:     |
+|  1501  |              0.01 / 0 / 0.01             |             0.01 / 0 / 0.01             | :white_check_mark: |
+|  3001  |             15 / 0.02 / 15.02            |            18 / 0.02 / 18.02            |     :no_entry:     |
+
+# Code PIN
 
 * Partition
+
+| 0 | 0-999 | 0000 | 9999 | 00000 | 00001+ |
+|---|-------|------|------|-------|--------|
+
+* Test
+
+| Entrée | Attendu | Obtenue |        Test        |
+|:------:|:-------:|:-------:|:------------------:|
+|  0000  |   true  |  false  |     :no_entry:     |
+|    1   |  false  |  false  | :white_check_mark: |
+|   12   |  false  |  false  | :white_check_mark: |
+|   123  |  false  |  false  | :white_check_mark: |
+|  1234  |   true  |   true  | :white_check_mark: |
+|  5678  |   true  |   true  | :white_check_mark: |
+|  9012  |   true  |  false  |     :no_entry:     |
+|  9999  |   true  |   true  | :white_check_mark: |
+|  12564 |  false  |  false  | :white_check_mark: |
+
 
