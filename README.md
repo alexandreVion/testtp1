@@ -6,7 +6,9 @@ Nathan Guilhot et Alexandre Vion | 05/02/2020 | Automatiser les tests d'une appl
 
 # Introduction
 
-Lors de ce premier TP nous devons faire des test sur différentes mini-applications faite sur Javascript. Ces test sont des test de détection réaliser en boite noire.
+Lors de ce premier TP nous devons faire des test sur différentes mini-applications faite en Javascript. Ces test sont des 
+test de détection a fin de detecter d'éventuelles erreurs. Ces test sont réaliser en boite noire c'est à dire qu'on a aucune 
+visualisation sur le code.
 
 # Première partie
 
@@ -31,6 +33,12 @@ Sur cette première partie on doit réaliser des test sur une fonction qui calcu
 |        10%        |          10         |           1           |           11          |           1           |           11          | :white_check_mark: |
 |        20%        |          5          |           1           |           6           |           1           |           6           | :white_check_mark: |
 |        20%        |          4          |          0.80         |          4.80         |          0.80         |           4           |     :no_entry:     |
+
+* Conclusion
+
+On remarque que les résultats des calculs montant TTC ne sont pas toujours bon. On remarque aussi que les calculs faux sont
+ceux qui devrait contenir des nombres décimaux. On peut en déduire que le calcul des montants TTC se fait avec un INT ( 
+un nombre entier) et qui du coup arrondi la valeur et empêche d'avoir le bon résultat. 
 
 # Seconde partie Badminton
 
@@ -76,11 +84,20 @@ Sur cette seconde partie on doit réaliser des test sur une fonction qui calcule
 | 70     | Vétéran 8 | Vétéran 8  | :white_check_mark: |
 | 144    | Vétéran 8 | Vétéran 22 | :no_entry:         |
 
+* Conclusion
+
+Ici on detecte deux erreurs. La première est qu'avec l'entrée 35 pour l'age, qui est une valeur limite, on a pas la bonne 
+sortie. L'erreur provient certainement du fait que les bornes n'ont pas été implémentées correctement. La deuxième erreur 
+provient de la partie 70+ de la partition. On se retrouve avec un vétéran 22 a la place d'un vétéran 8 pour l'entré 144. 
+L'erreur pourrait venir du fait que a partir du catégorie vétéran 1, les catégories changes touts les 5 ans avec une 
+incrémentations sur le vétéran. Ce qui a peut être fait par une boucle qui ne s'arrete pas lors des entrées 70+ et va
+donc donner des rangs de vétérans qui n'existe pas.
+
 # Troisème partie
 
 * Objectifs 
 
-Sur cette troisième  partie on doit réaliser des test sur une fonction qui calcule la rubrique de paie EUNI. Pour réaliser 
+Sur cette troisième partie on doit réaliser des test sur une fonction qui calcule la rubrique de paie EUNI. Pour réaliser 
 cet objectifs on a fixer le smic a 1000 €.
 
 * Partition 
@@ -101,6 +118,13 @@ cet objectifs on a fixer le smic a 1000 €.
 |  4000  |               15 / 20 / 35               |               18 / 20 / 35              |     :no_entry:     |
 |  1501  |              0.01 / 0 / 0.01             |             0.01 / 0 / 0.01             | :white_check_mark: |
 |  3001  |             15 / 0.02 / 15.02            |            18 / 0.02 / 18.02            |     :no_entry:     |
+
+* Conclusion
+
+L'erreur trouver dans cette fonction de calcul de la rubrique de paie EUNI sur trouve sur les résultats des calculs de la
+tranche B. On remarque qu'au lieu d'avoir le résultat attendu en se retrouve avec la valeur 18. Cette valeur on la retrouve
+avec le tableau de test pour un smic a 1200€. On peut en déduire que le calcul de la tranche se fait avec une valeur fixe a 
+1200 eu lieu de prendre la valeur donné.
 
 # Quatrième partie Code PIN
 
@@ -126,5 +150,10 @@ Sur cette quatrième partie on doit réaliser des test sur une fonction qui vér
 |  9012  |   true  |  false  |     :no_entry:     |
 |  9999  |   true  |   true  | :white_check_mark: |
 |  12564 |  false  |  false  | :white_check_mark: |
+
+* Conclusion
+
+Les erreurs qu'on remarque lors de ce test proviennet quand le chiffre 0 est présent dans le code PIN. On peut en déduire que
+la fonction ne prend pas en compte le chiffre 0 lors des fonctions de vérification du code PIN.
 
 
